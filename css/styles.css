@@ -351,6 +351,27 @@
         background-position: center center;
       }
 
+       .project-image7{
+        background-image: url("../imgs/weddingdetails.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+       .project-image8{
+        background-image: url("../imgs/momentum.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+       .project-image9{
+        background-image: url("../imgs/web-design.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
       .project-details{
         padding: 1.25rem;
       }
