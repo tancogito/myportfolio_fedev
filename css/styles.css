@@ -1,17 +1,17 @@
       :root {
-        --primary-color: #1a1a1a;
-        --secondary-color: #6c757d;
-        --accent-color: #4caaaf; /* A touch of green for accents */
-        /* --light-bg-color: #f8f9fa; */
-        --light-bg-color: #FCD1B4; 
-        --white: #ffffff;
-        /* --white: #FCD1B4; */
-        /* --bkgnd: #fff; */
-        --bkgnd:#FCD1B4  
-        --border-radius: 0.5rem; /* Converted from 8px */
+        --primary-color: #e2e8f0;    /* headings + body text */
+        --secondary-color: #94a3b8;  /* muted text */
+        --accent-color: #5eead4;     /* teal accent */
+        --light-bg-color: #0b1120;   /* alternating section bands */
+        --surface: #1e293b;          /* cards, nav, footer */
+        --on-accent: #0f172a;        /* text on light/accent buttons */
+        --name-accent: #38bdf8;      /* "Mina" in the hero heading */
+        --white: #ffffff;            /* kept for true white only */
+        --bkgnd: #0f172a;            /* page background */
+        --border-radius: 0.5rem;     /* Converted from 8px */
         --transition-speed: 0.3s;
         --project-image-text: rgba(255, 255, 255, 0.7);
-        /* Optional: Set base font size for easier rem calculations (e.g., 62.5% = 10px) */
+        /* Optional: Set base font size for easier rem calculations */
         font-size: 100%; /* Default 16px. 1rem = 16px */
       }
 
@@ -24,7 +24,8 @@
       
       body {
         font-family:
-          "Lato", sans-serif; /* fallback font is the browser's system font */
+          "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif; /* Inter, matching brittanychiang.com */
         line-height: 1.6;
         background-color: var(--bkgnd); /* targets element's background */
         color: var(--primary-color); /* targets font's color */
@@ -51,8 +52,8 @@
         justify-content: center;
         align-items: center;
         padding: 0.9375rem 1.25rem; /* 15px (top,bottom) 20px (left,right) */
-        background-color: var(--white);
-        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+        background-color: var(--surface);
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.45);
         position: sticky;
         top: 0;
         z-index: 1000;
@@ -102,6 +103,10 @@
         font-weight: 700;
       }
 
+      .landing-content h1 .name-accent {
+        color: var(--name-accent);
+      }
+
       .landing-content p {
         font-size: 1.2rem;
         color: var(--secondary-color);
@@ -129,33 +134,33 @@
 
       .cta-group a:first-child {
         /* target 1st child of <a> tag in cta-group */
-        background-color: var(--white);
+        background-color: var(--surface);
         color: var(--primary-color);
       }
 
       .cta-group a:first-child:hover {
         /* hover effect for 1st child of <a> tag in cta-group */
         background-color: var(--primary-color);
-        color: var(--white);
+        color: var(--on-accent);
       }
 
       .cta-group a:last-child {
         /* target last child of <a> tag in cta group */
         background-color: var(--primary-color);
-        color: var(--white);
+        color: var(--on-accent);
       }
 
       .cta-group a:last-child:hover {
         /* target last child of <a> tag in cta group */
         background-color: var(--accent-color);
         border-color: var(--accent-color);
-        color: var(--white);
-        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+        color: var(--on-accent);
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
       }
 
       /* 2. About Section */
       #about {
-        background-color: var(--white);
+        background-color: var(--surface);
       }
 
       .about-grid {
@@ -169,7 +174,7 @@
       }
 
       .about-image img {
-        background: #000;
+        background: transparent;
         width: 100%;
         max-width: 18.75rem;
         border-radius: var(--border-radius);
@@ -199,7 +204,7 @@
         border-radius: var(--border-radius);
         text-align: center;
         background-color: var(--light-bg-color);
-        box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.45);
       }
 
       .info-card h4 {
@@ -223,9 +228,9 @@
         flex: 1;
         min-width: 18.75rem;
         padding: 1.875rem;
-        background-color: var(--white);
+        background-color: var(--surface);
         border-radius: var(--border-radius);
-        box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.45);
         text-align: center;
       }
 
@@ -270,9 +275,9 @@
       .project-card{
         flex-basis: calc(33.333% - 1.25rem);  /* spec. amt of cards per row in the grid */
         min-width: 17.5rem;
-        background-color: var(--white);
+        background-color: var(--surface);
         border-radius: var(--border-radius);
-        box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.5);
         overflow: hidden;
         border: 1px solid var(--light-bg-color);
         transition: transform var(--transition-speed);
@@ -379,7 +384,7 @@
         font-weight: 600;
         border-radius: var(--border-radius);
         padding: 0.125rem 0.5rem;
-        color: var(--white);
+        color: var(--on-accent);
       }
 
       /* 5. Contact section */
@@ -409,7 +414,7 @@
 
       .contact-links a:hover{
         background-color: var(--primary-color);
-        color: var(--white);
+        color: var(--on-accent);
       }
 
       .contact-links a span{
@@ -422,7 +427,7 @@
         text-align: center;
         padding: 1.25rem;
         border-top: 0.0625rem solid var(--light-bg-color);
-        background-color: var(--white);
+        background-color: var(--surface);
       }
 
       footer div a {
