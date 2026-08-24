@@ -1,0 +1,7 @@
+# Original uncompressed screen recording - too large for GitHub (113 MiB > 100 MiB limit).
+# The web-optimised Todo_web.mp4 is committed instead.
+vids/Todo.mp4
+frame_old.png
+frame_new.png
+vids/ffmpeg.log
+_to_delete/
