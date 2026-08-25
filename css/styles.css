@@ -106,7 +106,7 @@
           transparent 222deg,
           transparent 360deg
         );
-        animation: hero-sweep 96s linear infinite;
+        animation: hero-sweep 64s linear infinite;
         pointer-events: none;  /* never blocks clicks on the buttons */
         z-index: 0;
       }
